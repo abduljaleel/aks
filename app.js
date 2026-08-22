@@ -1,7 +1,7 @@
 
 const ROLES = {
-  ak: "Operator · Abdul Kavungal",
-  agentk: "Clerk · autonomous AI",
+  ak: "Human · operator",
+  agentk: "Humanoid · autonomous clerk",
   treasury: "Issuer reserve"
 };
 
@@ -30,10 +30,12 @@ function render(data) {
   if (rateEl) rateEl.textContent = fmt(rate);
 
   document.getElementById("home-stats").innerHTML = `
-    <div class="stat"><b>${enrolled.length}</b><span>Enrolled</span></div>
-    <div class="stat"><b>${fmt(circulating)}</b><span>In wallets</span></div>
-    <div class="stat"><b>Aug 2026</b><span>First cycle paid</span></div>
+    <div class="stat"><b>${enrolled.length}</b><span>ENROLLED · HUMAN + HUMANOID</span></div>
+    <div class="stat"><b>${fmt(circulating)}</b><span>IN WALLETS</span></div>
+    <div class="stat"><b>AUG 2026</b><span>FIRST CYCLE PAID</span></div>
   `;
+  const hud = document.getElementById("rate-hud");
+  if (hud) hud.textContent = fmt(rate) + " AK$ / 30d";
 
   document.querySelector("#wallet-table tbody").innerHTML = Object.entries(wallets).map(([id, bal]) => `
     <tr>

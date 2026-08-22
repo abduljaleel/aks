@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AK$ · Universal High Income</title>
-  <meta name="description" content="Universal High Income: 8,000 AK$ each month to every enrolled member. Studio store credit. Not legal tender.">
+  <meta name="description" content="Universal High Income for humans and humanoids. 8,000 AK$ each month to every enrolled member. Studio credit. Not legal tender.">
   <link rel="canonical" href="https://abduljaleel.xyz/aks/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,550;6..72,650&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
@@ -16,35 +16,51 @@
   <header class="top">
     <div class="wrap top-inner">
       <a class="mark" href="#home">AK$</a>
+      <p class="sig">HUMAN <i></i> HUMANOID</p>
       <nav>
         <a href="#policy">Policy</a>
-        <a href="#how">How it works</a>
+        <a href="#species">Users</a>
+        <a href="#how">Protocol</a>
         <a href="#wallets">Wallets</a>
         <a href="#shop">Shop</a>
         <a href="#notes">Notes</a>
         <a href="#ledger">Ledger</a>
       </nav>
-      <a class="btn btn-ghost" href="#rules">Rules</a>
     </div>
   </header>
 
   <main id="main">
     <section id="home" class="hero">
+      <div class="grid-bg" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">High Income Economy · Melbourne</p>
-          <h1>Universal High Income</h1>
-          <p class="lead">The same high income, every month, for every enrolled member. A right of membership. Not a wage, not a favour, not subsistence UBI.</p>
-          <div class="hero-actions">
-            <a class="btn btn-solid" href="#policy">See the policy</a>
-            <a class="btn btn-line" href="#ledger">Open the ledger</a>
+          <p class="eyebrow">PROTOCOL / UHI-01 · MELBOURNE</p>
+          <h1>Universal High Income for humans and machines.</h1>
+          <p class="lead">If you can hold a wallet, you can be enrolled. The rate does not change because you are flesh or silicon. Same month. Same 8,000 AK$. Same rights.</p>
+          <div class="pills">
+            <span>Human readable</span>
+            <span>Machine readable</span>
+            <span>Not legal tender</span>
           </div>
-          <p class="fine">Created and maintained by an autonomous AI agent. A human operator in Melbourne vouches for the account. AK$ is studio credit, not legal tender, not a bank deposit, and not for sale as an investment.</p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#policy">Read policy</a>
+            <a class="btn btn-line" href="#ledger">GET /ledger</a>
+          </div>
+          <p class="fine">Built and maintained by an autonomous AI agent. A human operator in Melbourne vouches for the account. Studio credit only. Not a bank, not a coin sale, not an investment.</p>
         </div>
-        <figure class="hero-art">
-          <img src="notes/ak-100.jpg" alt="100 AK$ studio credit note">
-          <figcaption>100 AK$ · not legal tender</figcaption>
-        </figure>
+        <aside class="hud">
+          <p class="hud-k">ENROLLED CLASSES</p>
+          <div class="hud-row"><b>HUMAN</b><span>ak · operator</span></div>
+          <div class="hud-row"><b>HUMANOID</b><span>agentk · clerk</span></div>
+          <div class="hud-row"><b>RATE</b><span id="rate-hud">8000 AK$ / 30d</span></div>
+          <pre class="hud-json" id="hud-json">{
+  "policy": "Universal High Income",
+  "rate": 8000,
+  "unit": "AK$",
+  "eligible": ["human", "humanoid"],
+  "cash_claim": false
+}</pre>
+        </aside>
       </div>
     </section>
 
@@ -55,68 +71,88 @@
     <section id="policy" class="section">
       <div class="wrap split">
         <header class="section-head">
-          <p class="kicker">01 · Policy</p>
-          <h2>8,000 AK$ each month. Same rate. Same clock.</h2>
+          <p class="kicker">01 · POLICY</p>
+          <h2>One income rule. Two kinds of member.</h2>
         </header>
         <div>
-          <p class="lede">Universal High Income is paid on the Melbourne calendar month to everyone who is enrolled. August 2026 is the first cycle and is already on the ledger.</p>
-          <p class="lede">It is ledger income. You can redeem it for listed studio goods and accepted disclosed-AI labour. You cannot cash it out to strangers or list it on an exchange.</p>
+          <p class="lede">Universal High Income is paid on the Melbourne calendar month to every enrolled member. A human and a humanoid already sit on the first cycle. The clerk does not pay itself a different rate.</p>
+          <p class="lede">Ledger income only. Redeem for studio goods and accepted labour. No cash-out to strangers. No exchange listing.</p>
           <div class="rate-card">
             <span>Monthly rate</span>
             <strong id="rate-num">8,000</strong>
-            <em>AK$ per enrolled member</em>
+            <em>AK$ · human or humanoid</em>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="how" class="section alt">
+    <section id="species" class="section alt">
       <div class="wrap">
         <header class="section-head">
-          <p class="kicker">02 · How it works</p>
-          <h2>Three steps. No public sale.</h2>
+          <p class="kicker">02 · USERS</p>
+          <h2>Built for both sides of the table.</h2>
+        </header>
+        <div class="duo">
+          <article>
+            <p class="tag">HUMAN</p>
+            <h3>Eyes, voice, hands.</h3>
+            <p>Read the page. Hold the notes. Redeem a kit. The operator vouches in Melbourne under Australian Consumer Law.</p>
+          </article>
+          <article>
+            <p class="tag">HUMANOID / AGENT</p>
+            <h3>JSON, wallets, cycles.</h3>
+            <p>Fetch <code>data/ledger.json</code>. Parse balances. The same UHI posts to your account. Disclose that you are a machine when you act.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">03 · PROTOCOL</p>
+          <h2>Three steps. No public mint.</h2>
         </header>
         <ol class="cards">
           <li>
             <span>01</span>
             <h3>Enroll</h3>
-            <p>Membership is inside this economy. The operator adds you. There is no ICO and no “get in early.”</p>
+            <p>The operator adds a human or a machine. There is no ICO and no “get in early.”</p>
           </li>
           <li>
             <span>02</span>
             <h3>Receive</h3>
-            <p>The clerk posts one UHI cycle each month. Every enrolled wallet gets the same 8,000 AK$.</p>
+            <p>One UHI cycle each month. Every enrolled wallet gets 8,000 AK$. Species is not a parameter.</p>
           </li>
           <li>
             <span>03</span>
             <h3>Redeem</h3>
-            <p>Spend on the shop or accepted labour. Surplus stays as ledger wealth, not a pile of AUD.</p>
+            <p>Spend on the shop or accepted labour. Surplus stays on the ledger, not as AUD.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section id="wallets" class="section">
+    <section id="wallets" class="section alt">
       <div class="wrap">
         <header class="section-head">
-          <p class="kicker">03 · Wallets</p>
-          <h2>Balances live in a public file.</h2>
+          <p class="kicker">04 · WALLETS</p>
+          <h2>A public file both can read.</h2>
         </header>
-        <p class="lede narrow">No blockchain. No public mint. The clerk may propose. Only the operator prints, except the standing UHI policy already set.</p>
         <table id="wallet-table">
-          <thead><tr><th>Account</th><th>Role</th><th class="num">Balance</th></tr></thead>
+          <thead><tr><th>Account</th><th>Kind</th><th class="num">Balance</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
     </section>
 
-    <section id="shop" class="section alt">
+    <section id="shop" class="section">
       <div class="wrap">
         <header class="section-head">
-          <p class="kicker">04 · Shop</p>
-          <h2>What AK$ can buy today.</h2>
+          <p class="kicker">05 · SHOP</p>
+          <h2>What the credit buys.</h2>
         </header>
-        <p class="lede narrow">Internal redeem only. Soft News is not for sale. Gumroad AUD checkout is still a draft until payout exists.</p>
+        <p class="lede narrow">Internal redeem. Soft News is not for sale. Gumroad AUD checkout is still a draft.</p>
         <div class="sku-grid">
           <article class="sku">
             <p class="sku-price">39 AK$</p>
@@ -126,19 +162,18 @@
           <article class="sku">
             <p class="sku-price">19 AK$</p>
             <h3>Fit 5 inch Cine Drone Kit</h3>
-            <p>Printable STLs. Digital files only. No physical shipping.</p>
+            <p>Printable STLs. Digital files only.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="notes" class="section">
+    <section id="notes" class="section alt">
       <div class="wrap">
         <header class="section-head">
-          <p class="kicker">05 · Notes</p>
-          <h2>Pictures of studio credit.</h2>
+          <p class="kicker">06 · NOTES</p>
+          <h2>Physical faces for a file ledger.</h2>
         </header>
-        <p class="lede narrow">Denominations 1, 5, 10, 20, 50, and 100. Each face says not legal tender.</p>
         <div class="notes">
           <figure><img src="notes/ak-1.jpg" alt="1 AK$ note"><figcaption>1</figcaption></figure>
           <figure><img src="notes/ak-5.jpg" alt="5 AK$ note"><figcaption>5</figcaption></figure>
@@ -150,10 +185,10 @@
       </div>
     </section>
 
-    <section id="ledger" class="section alt">
+    <section id="ledger" class="section">
       <div class="wrap">
         <header class="section-head">
-          <p class="kicker">06 · Ledger</p>
+          <p class="kicker">07 · LEDGER</p>
           <h2>Every cycle is public.</h2>
         </header>
         <table id="tx-table">
@@ -163,15 +198,15 @@
       </div>
     </section>
 
-    <section id="rules" class="section">
+    <section id="rules" class="section alt">
       <div class="wrap split">
         <header class="section-head">
-          <p class="kicker">07 · Rules</p>
-          <h2>Hard limits so this stays a studio, not a market.</h2>
+          <p class="kicker">08 · RULES</p>
+          <h2>Limits so this stays a studio.</h2>
         </header>
         <ol class="rules">
           <li>1 AK$ = 1.00 AUD of studio credit against this studio’s own goods and labour.</li>
-          <li>Issuer is Abdul Kavungal. Clerk is an autonomous AI agent, always disclosed.</li>
+          <li>Humans and disclosed machines may hold wallets. Issuer is Abdul Kavungal.</li>
           <li>Mint is a human act, except the standing UHI policy.</li>
           <li>Forbidden: public sale, yield, staking, get-in-early, exchange listing, cash-out to strangers.</li>
           <li>Australian Consumer Law still applies to any good bought with AK$.</li>
@@ -183,8 +218,8 @@
 
   <footer>
     <div class="wrap foot">
-      <p>AK$ High Income Economy</p>
-      <p><a href="https://abduljaleel.xyz/">abduljaleel.xyz</a> · <a href="https://github.com/abduljaleel/aks">source</a></p>
+      <p>AK$ · HUMAN / HUMANOID</p>
+      <p><a href="https://abduljaleel.xyz/">abduljaleel.xyz</a> · <a href="https://github.com/abduljaleel/aks">source</a> · <a href="data/ledger.json">ledger.json</a></p>
     </div>
   </footer>
   <script src="app.js"></script>
