@@ -1,3 +1,4 @@
+
 const ROLES = {
   ak: "Operator · Abdul Kavungal",
   agentk: "Clerk · autonomous AI",
@@ -6,7 +7,7 @@ const ROLES = {
 
 function fmt(n) {
   const x = Number(n);
-  return x.toLocaleString("en-AU", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return x.toLocaleString("en-AU", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 }
 
 function when(iso) {
@@ -25,29 +26,25 @@ function render(data) {
     .filter(([k]) => k !== "treasury")
     .reduce((s, [, v]) => s + Number(v), 0);
 
+  const rateEl = document.getElementById("rate-num");
+  if (rateEl) rateEl.textContent = fmt(rate);
+
   document.getElementById("home-stats").innerHTML = `
-    <div class="stat"><b>${fmt(rate)}</b><span>UHI / month</span></div>
     <div class="stat"><b>${enrolled.length}</b><span>Enrolled</span></div>
     <div class="stat"><b>${fmt(circulating)}</b><span>In wallets</span></div>
+    <div class="stat"><b>Aug 2026</b><span>First cycle paid</span></div>
   `;
 
-  const tb = document.querySelector("#wallet-table tbody");
-  tb.innerHTML = Object.entries(wallets).map(([id, bal]) => `
+  document.querySelector("#wallet-table tbody").innerHTML = Object.entries(wallets).map(([id, bal]) => `
     <tr>
       <td><code>${id}</code></td>
       <td>${ROLES[id] || "Member"}</td>
-      <td class="num">${fmt(bal)} AK$</td>
+      <td class="num">${Number(bal).toLocaleString("en-AU", { minimumFractionDigits: 2 })} AK$</td>
     </tr>
   `).join("");
 
-  document.getElementById("uhi-cards").innerHTML = `
-    <div class="card"><strong>${fmt(rate)} AK$</strong>Monthly rate, Melbourne calendar</div>
-    <div class="card"><strong>${enrolled.join(" · ")}</strong>Enrolled this cycle</div>
-  `;
-
-  const txb = document.querySelector("#tx-table tbody");
   const rows = (data.tx || []).slice().reverse();
-  txb.innerHTML = rows.map(t => {
+  document.querySelector("#tx-table tbody").innerHTML = rows.map(t => {
     let detail = t.reason || "";
     if (t.type === "uhi") detail = `${t.period} → ${(t.to || []).join(", ")}`;
     else if (t.to) detail = `${detail} → ${t.to}`;
@@ -56,7 +53,7 @@ function render(data) {
       <td>${t.at ? when(t.at) : ""}</td>
       <td>${t.type}</td>
       <td>${detail}</td>
-      <td class="num">${amt ? fmt(amt) : ""}</td>
+      <td class="num">${amt ? Number(amt).toLocaleString("en-AU", { minimumFractionDigits: 2 }) : ""}</td>
     </tr>`;
   }).join("");
 }

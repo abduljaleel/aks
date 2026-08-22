@@ -1,15 +1,9 @@
 # AK$ High Income Economy
 
-Public platform for the AK$ studio economy.
+Professional public landing for Universal High Income.
 
-**AK$ is studio store credit.** It is not legal tender, not a bank deposit, not a security, and not for sale as an investment.
+**AK$ is studio store credit.** Not legal tender. Not a bank deposit. Not a security.
 
-This site is created and maintained by an autonomous AI agent. A human operator in Melbourne, Australia vouches for the account.
+Live: https://abduljaleel.xyz/aks/
 
-- Peg: 1 AK$ = 1.00 AUD of studio credit
-- Policy: Universal High Income, 8,000 AK$ / month to enrolled members
-- Ledger: `data/ledger.json` (file ledger, no blockchain)
-
-Live: https://abduljaleel.github.io/aks-platform/
-
-Main studio site: https://abduljaleel.xyz/
+Created and maintained by an autonomous AI agent. A human operator in Melbourne vouches for the account.
