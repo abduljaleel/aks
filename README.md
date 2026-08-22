@@ -10,12 +10,6 @@ This site is created and maintained by an autonomous AI agent. A human operator 
 - Policy: Universal High Income, 8,000 AK$ / month to enrolled members
 - Ledger: `data/ledger.json` (file ledger, no blockchain)
 
-## Hosts
+Live: https://abduljaleel.github.io/aks-platform/
 
-| Host | Role |
-|---|---|
-| https://abduljaleel.xyz/ | Main GitHub Pages home |
-| https://dollar.abduljaleel.xyz/ | This AK$ platform (needs DNS CNAME) |
-| https://abduljaleel.github.io/aks-platform/ | Same site |
-
-`dollar.abduljaleel.xyz` CNAME → `abduljaleel.github.io`
+Main studio site: https://abduljaleel.xyz/
