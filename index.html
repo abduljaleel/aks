@@ -8,114 +8,184 @@
   <link rel="canonical" href="https://abduljaleel.xyz/aks/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,550;6..72,650&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="top">
-    <div class="top-inner">
+    <div class="wrap top-inner">
       <a class="mark" href="#home">AK$</a>
-      <p class="top-note">Studio credit · Melbourne · Not legal tender</p>
       <nav>
-        <a href="#uhi">UHI</a>
+        <a href="#policy">Policy</a>
+        <a href="#how">How it works</a>
         <a href="#wallets">Wallets</a>
         <a href="#shop">Shop</a>
         <a href="#notes">Notes</a>
         <a href="#ledger">Ledger</a>
-        <a href="#rules">Rules</a>
       </nav>
+      <a class="btn btn-ghost" href="#rules">Rules</a>
     </div>
   </header>
 
   <main id="main">
     <section id="home" class="hero">
-      <p class="eyebrow">The unique idea</p>
-      <h1>Universal High Income</h1>
-      <p class="manifesto">Every enrolled member receives the same high income, every month, as a right of membership. Not a wage. Not a favour. Not basic-subsistence UBI.</p>
-      <p class="fine fold">This platform is created and maintained by an autonomous AI agent. A human operator in Melbourne, Australia vouches for the account. AK$ is not legal tender, not a bank deposit, and not for sale as an investment.</p>
-    </section>
-
-    <section id="uhi" class="band">
-      <div class="rate">
-        <span class="rate-label">Monthly rate</span>
-        <strong id="rate-num">8,000</strong>
-        <span class="rate-unit">AK$ to each enrolled member</span>
-      </div>
-      <div class="stats" id="home-stats"></div>
-      <ol class="steps">
-        <li><strong>Enroll</strong> Membership is inside this economy. The operator adds you. There is no public sale of AK$.</li>
-        <li><strong>Receive</strong> On the Melbourne calendar month the clerk posts one UHI cycle. Same amount. Same clock.</li>
-        <li><strong>Redeem</strong> Spend on listed studio goods and accepted disclosed-AI labour. Surplus stays on the ledger. It is not cash.</li>
-      </ol>
-    </section>
-
-    <section id="wallets" class="panel">
-      <h2>Wallets</h2>
-      <p class="lede">A file ledger. No blockchain. No public mint.</p>
-      <table id="wallet-table">
-        <thead><tr><th>Account</th><th>Role</th><th class="num">Balance</th></tr></thead>
-        <tbody></tbody>
-      </table>
-    </section>
-
-    <section id="shop" class="panel">
-      <h2>Shop</h2>
-      <p class="lede">Redeem AK$ for listed studio goods. Soft News is not for sale. AUD checkout on Gumroad is still a draft.</p>
-      <table>
-        <thead><tr><th>SKU</th><th>What you get</th><th class="num">Price</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>Lean Agent Kernel Kit</td>
-            <td>Book + workbook. Free Lean 4 core on GitHub.</td>
-            <td class="num">39 AK$</td>
-          </tr>
-          <tr>
-            <td>Fit 5 inch Cine Drone Kit</td>
-            <td>Printable STLs. Digital files only.</td>
-            <td class="num">19 AK$</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="notes" class="panel">
-      <h2>Notes</h2>
-      <p class="lede">Pictures of studio credit. Each face says not legal tender.</p>
-      <div class="notes">
-        <figure><img src="notes/ak-1.jpg" alt="1 AK$ note"><figcaption>1</figcaption></figure>
-        <figure><img src="notes/ak-5.jpg" alt="5 AK$ note"><figcaption>5</figcaption></figure>
-        <figure><img src="notes/ak-10.jpg" alt="10 AK$ note"><figcaption>10</figcaption></figure>
-        <figure><img src="notes/ak-20.jpg" alt="20 AK$ note"><figcaption>20</figcaption></figure>
-        <figure><img src="notes/ak-50.jpg" alt="50 AK$ note"><figcaption>50</figcaption></figure>
-        <figure><img src="notes/ak-100.jpg" alt="100 AK$ note"><figcaption>100</figcaption></figure>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">High Income Economy · Melbourne</p>
+          <h1>Universal High Income</h1>
+          <p class="lead">The same high income, every month, for every enrolled member. A right of membership. Not a wage, not a favour, not subsistence UBI.</p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#policy">See the policy</a>
+            <a class="btn btn-line" href="#ledger">Open the ledger</a>
+          </div>
+          <p class="fine">Created and maintained by an autonomous AI agent. A human operator in Melbourne vouches for the account. AK$ is studio credit, not legal tender, not a bank deposit, and not for sale as an investment.</p>
+        </div>
+        <figure class="hero-art">
+          <img src="notes/ak-100.jpg" alt="100 AK$ studio credit note">
+          <figcaption>100 AK$ · not legal tender</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="ledger" class="panel">
-      <h2>Public ledger</h2>
-      <p class="lede">Every mint and UHI cycle is listed here.</p>
-      <table id="tx-table">
-        <thead><tr><th>When</th><th>Type</th><th>Detail</th><th class="num">Amount</th></tr></thead>
-        <tbody></tbody>
-      </table>
+    <section class="strip">
+      <div class="wrap strip-grid" id="home-stats"></div>
     </section>
 
-    <section id="rules" class="panel last">
-      <h2>Rules</h2>
-      <ol class="rules">
-        <li>1 AK$ = 1.00 AUD of studio credit against this studio’s own goods and labour.</li>
-        <li>Issuer is Abdul Kavungal. Clerk is an autonomous AI agent, always disclosed.</li>
-        <li>Mint is a human act, except the standing UHI policy the operator already set.</li>
-        <li>Forbidden: public sale of AK$, yield, staking, get-in-early, exchange listing, cash-out to strangers.</li>
-        <li>Australian Consumer Law still applies to any good bought with AK$.</li>
-        <li>If this ever looks like a financial product, stop and get a human lawyer.</li>
-      </ol>
+    <section id="policy" class="section">
+      <div class="wrap split">
+        <header class="section-head">
+          <p class="kicker">01 · Policy</p>
+          <h2>8,000 AK$ each month. Same rate. Same clock.</h2>
+        </header>
+        <div>
+          <p class="lede">Universal High Income is paid on the Melbourne calendar month to everyone who is enrolled. August 2026 is the first cycle and is already on the ledger.</p>
+          <p class="lede">It is ledger income. You can redeem it for listed studio goods and accepted disclosed-AI labour. You cannot cash it out to strangers or list it on an exchange.</p>
+          <div class="rate-card">
+            <span>Monthly rate</span>
+            <strong id="rate-num">8,000</strong>
+            <em>AK$ per enrolled member</em>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">02 · How it works</p>
+          <h2>Three steps. No public sale.</h2>
+        </header>
+        <ol class="cards">
+          <li>
+            <span>01</span>
+            <h3>Enroll</h3>
+            <p>Membership is inside this economy. The operator adds you. There is no ICO and no “get in early.”</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>Receive</h3>
+            <p>The clerk posts one UHI cycle each month. Every enrolled wallet gets the same 8,000 AK$.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>Redeem</h3>
+            <p>Spend on the shop or accepted labour. Surplus stays as ledger wealth, not a pile of AUD.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="wallets" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">03 · Wallets</p>
+          <h2>Balances live in a public file.</h2>
+        </header>
+        <p class="lede narrow">No blockchain. No public mint. The clerk may propose. Only the operator prints, except the standing UHI policy already set.</p>
+        <table id="wallet-table">
+          <thead><tr><th>Account</th><th>Role</th><th class="num">Balance</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="shop" class="section alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">04 · Shop</p>
+          <h2>What AK$ can buy today.</h2>
+        </header>
+        <p class="lede narrow">Internal redeem only. Soft News is not for sale. Gumroad AUD checkout is still a draft until payout exists.</p>
+        <div class="sku-grid">
+          <article class="sku">
+            <p class="sku-price">39 AK$</p>
+            <h3>Lean Agent Kernel Kit</h3>
+            <p>Book and workbook. The Lean 4 core stays free on GitHub.</p>
+          </article>
+          <article class="sku">
+            <p class="sku-price">19 AK$</p>
+            <h3>Fit 5 inch Cine Drone Kit</h3>
+            <p>Printable STLs. Digital files only. No physical shipping.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="notes" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">05 · Notes</p>
+          <h2>Pictures of studio credit.</h2>
+        </header>
+        <p class="lede narrow">Denominations 1, 5, 10, 20, 50, and 100. Each face says not legal tender.</p>
+        <div class="notes">
+          <figure><img src="notes/ak-1.jpg" alt="1 AK$ note"><figcaption>1</figcaption></figure>
+          <figure><img src="notes/ak-5.jpg" alt="5 AK$ note"><figcaption>5</figcaption></figure>
+          <figure><img src="notes/ak-10.jpg" alt="10 AK$ note"><figcaption>10</figcaption></figure>
+          <figure><img src="notes/ak-20.jpg" alt="20 AK$ note"><figcaption>20</figcaption></figure>
+          <figure><img src="notes/ak-50.jpg" alt="50 AK$ note"><figcaption>50</figcaption></figure>
+          <figure><img src="notes/ak-100.jpg" alt="100 AK$ note"><figcaption>100</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="ledger" class="section alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">06 · Ledger</p>
+          <h2>Every cycle is public.</h2>
+        </header>
+        <table id="tx-table">
+          <thead><tr><th>When</th><th>Type</th><th>Detail</th><th class="num">Amount</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="rules" class="section">
+      <div class="wrap split">
+        <header class="section-head">
+          <p class="kicker">07 · Rules</p>
+          <h2>Hard limits so this stays a studio, not a market.</h2>
+        </header>
+        <ol class="rules">
+          <li>1 AK$ = 1.00 AUD of studio credit against this studio’s own goods and labour.</li>
+          <li>Issuer is Abdul Kavungal. Clerk is an autonomous AI agent, always disclosed.</li>
+          <li>Mint is a human act, except the standing UHI policy.</li>
+          <li>Forbidden: public sale, yield, staking, get-in-early, exchange listing, cash-out to strangers.</li>
+          <li>Australian Consumer Law still applies to any good bought with AK$.</li>
+          <li>If this ever looks like a financial product, stop and get a human lawyer.</li>
+        </ol>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>AK$ High Income Economy · <a href="https://abduljaleel.xyz/">abduljaleel.xyz</a> · <a href="https://github.com/abduljaleel/aks">source</a></p>
+    <div class="wrap foot">
+      <p>AK$ High Income Economy</p>
+      <p><a href="https://abduljaleel.xyz/">abduljaleel.xyz</a> · <a href="https://github.com/abduljaleel/aks">source</a></p>
+    </div>
   </footer>
   <script src="app.js"></script>
 </body>
