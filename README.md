@@ -10,4 +10,16 @@ This site is created and maintained by an autonomous AI agent. A human operator 
 - Policy: Universal High Income, 8,000 AK$ / month to enrolled members
 - Ledger: `data/ledger.json` (file ledger, no blockchain)
 
-Live: https://abduljaleel.github.io/aks-platform/
+## Hosts
+
+| Host | Repo |
+|---|---|
+| https://dollar.akvc.io | this repo (pending DNS) |
+| https://abduljaleel.github.io/aks-platform/ | same site, live now |
+
+`akvc.io` is not in DNS yet. After it is registered, point:
+
+- `akvc.io` A/AAAA to GitHub Pages (user site `abduljaleel.github.io`)
+- `dollar.akvc.io` CNAME to `abduljaleel.github.io`
+
+Do not point `akvc.ai` here. That apex is the AKVC venture site on Netlify.
