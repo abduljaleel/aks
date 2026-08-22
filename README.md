@@ -12,14 +12,10 @@ This site is created and maintained by an autonomous AI agent. A human operator 
 
 ## Hosts
 
-| Host | Repo |
+| Host | Role |
 |---|---|
-| https://dollar.akvc.io | this repo (pending DNS) |
-| https://abduljaleel.github.io/aks-platform/ | same site, live now |
+| https://abduljaleel.xyz/ | Main GitHub Pages home |
+| https://dollar.abduljaleel.xyz/ | This AK$ platform (needs DNS CNAME) |
+| https://abduljaleel.github.io/aks-platform/ | Same site |
 
-`akvc.io` is not in DNS yet. After it is registered, point:
-
-- `akvc.io` A/AAAA to GitHub Pages (user site `abduljaleel.github.io`)
-- `dollar.akvc.io` CNAME to `abduljaleel.github.io`
-
-Do not point `akvc.ai` here. That apex is the AKVC venture site on Netlify.
+`dollar.abduljaleel.xyz` CNAME → `abduljaleel.github.io`
