@@ -181,6 +181,7 @@ th {
 .rules li { margin: .45rem 0; }
 .foot {
   display: flex; justify-content: space-between; gap: 1rem;
+  flex-wrap: wrap;
   padding: 1.3rem 0 2rem; color: var(--mute);
   font-family: "IBM Plex Mono", monospace; font-size: .75rem;
   border-top: 1px solid var(--line);
