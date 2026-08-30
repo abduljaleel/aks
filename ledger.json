@@ -1,0 +1,48 @@
+{
+  "currency": "AK$",
+  "name": "AK$ High Income Economy",
+  "peg": "1 AK$ = 1.00 AUD store credit",
+  "legal": "Not legal tender. Not a security. Not for public sale as an investment.",
+  "issuer": "Abdul Kavungal",
+  "clerk": "AgentK$ (autonomous AI agent)",
+  "balances": {
+    "treasury": "0.00",
+    "ak": "9000.00",
+    "agentk": "8000.00"
+  },
+  "pending_mints": [],
+  "tx": [
+    {
+      "type": "mint",
+      "id": "m0001",
+      "to": "ak",
+      "amount": "1000.00",
+      "reason": "operator seed so the economy can start",
+      "ack": "operator",
+      "at": "2026-08-19T13:43:30Z"
+    },
+    {
+      "type": "uhi",
+      "id": "uhi-2026-08",
+      "period": "2026-08",
+      "rate": "8000.00",
+      "to": [
+        "ak",
+        "agentk"
+      ],
+      "reason": "Universal High Income first cycle",
+      "at": "2026-08-19T14:03:33Z"
+    }
+  ],
+  "policy": {
+    "name": "Universal High Income",
+    "rate_monthly": "8000.00",
+    "period": "calendar month, Australia/Melbourne",
+    "cash_claim": false,
+    "note": "Ledger income. Redeemable only for studio goods and accepted labour. Not a bank payout."
+  },
+  "enrolled": [
+    "ak",
+    "agentk"
+  ]
+}

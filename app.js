@@ -29,10 +29,17 @@ function render(data) {
   const rateEl = document.getElementById("rate-num");
   if (rateEl) rateEl.textContent = fmt(rate);
 
+  const lastUhi = (data.tx || []).filter((t) => t.type === "uhi").at(-1);
+  const lastPeriod = lastUhi?.period || "";
+  const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+  const lastLabel = lastPeriod
+    ? `${months[Number(lastPeriod.slice(5, 7)) - 1]} ${lastPeriod.slice(0, 4)}`
+    : "—";
+
   document.getElementById("home-stats").innerHTML = `
     <div class="stat"><b>${enrolled.length}</b><span>ENROLLED · HUMAN + HUMANOID</span></div>
     <div class="stat"><b>${fmt(circulating)}</b><span>IN WALLETS</span></div>
-    <div class="stat"><b>AUG 2026</b><span>FIRST CYCLE PAID</span></div>
+    <div class="stat"><b>${lastLabel}</b><span>LAST UHI PAID · NEXT MONTH NOT YET</span></div>
   `;
   const hud = document.getElementById("rate-hud");
   if (hud) hud.textContent = fmt(rate) + " AK$ / 30d";
@@ -60,8 +67,15 @@ function render(data) {
   }).join("");
 }
 
-fetch("data/ledger.json")
-  .then(r => r.json())
+function loadJson(url) {
+  return fetch(url).then((r) => {
+    if (!r.ok) throw new Error(url);
+    return r.json();
+  });
+}
+
+loadJson("ledger.json")
+  .catch(() => loadJson("data/ledger.json"))
   .then(render)
   .catch(() => {
     document.getElementById("home-stats").innerHTML = "<p class='fine'>Ledger failed to load.</p>";
