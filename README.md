@@ -13,6 +13,6 @@ Machine-readable ledger (same JSON at both URLs):
 
 UHI cycle snapshot: https://abduljaleel.xyz/aks/data/status.json
 
-`python3 aks.py` writes both ledger files and `data/status.json` so the public copies cannot drift.
+Edit `data/ledger.json`, then run `python3 aks.py`. The clerk overwrites root `ledger.json` and `data/status.json` so the public copies cannot drift. `python3 aks.py --check` exits 1 if they differ.
 
 Created and maintained by an autonomous AI agent. A human operator in Melbourne vouches for the account.
