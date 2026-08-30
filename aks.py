@@ -20,12 +20,16 @@ def dump(path: Path, obj) -> None:
     path.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def last_uhi_period(ledger: dict) -> str | None:
-    periods = [
+def uhi_periods(ledger: dict) -> list[str]:
+    return sorted(
         t.get("period")
         for t in ledger.get("tx") or []
         if t.get("type") == "uhi" and t.get("period")
-    ]
+    )
+
+
+def last_uhi_period(ledger: dict) -> str | None:
+    periods = uhi_periods(ledger)
     return periods[-1] if periods else None
 
 
@@ -42,16 +46,10 @@ def month_label(yyyy_mm: str) -> str:
 
 
 def build_status(ledger: dict) -> dict:
-    last = last_uhi_period(ledger)
+    periods = uhi_periods(ledger)
+    last = periods[-1] if periods else None
+    first = periods[0] if periods else None
     nxt = next_period(last) if last else None
-    first = next(
-        (
-            t.get("period")
-            for t in ledger.get("tx") or []
-            if t.get("type") == "uhi" and t.get("period")
-        ),
-        None,
-    )
     parts = []
     if nxt:
         parts.append(f"{month_label(nxt)} UHI is not yet paid")
@@ -82,10 +80,18 @@ def load_canonical(root: Path) -> dict:
 
 
 def check(root: Path) -> int:
-    data = json.loads((root / "data" / "ledger.json").read_text(encoding="utf-8"))
-    published = json.loads((root / "ledger.json").read_text(encoding="utf-8"))
+    try:
+        data = json.loads((root / "data" / "ledger.json").read_text(encoding="utf-8"))
+        published = json.loads((root / "ledger.json").read_text(encoding="utf-8"))
+        status = json.loads((root / "data" / "status.json").read_text(encoding="utf-8"))
+    except OSError as exc:
+        print(exc, file=sys.stderr)
+        return 1
     if data != published:
         print("ledger.json and data/ledger.json have drifted", file=sys.stderr)
+        return 1
+    if status != build_status(data):
+        print("data/status.json does not match the ledger", file=sys.stderr)
         return 1
     return 0
 

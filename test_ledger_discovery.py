@@ -32,6 +32,8 @@ class PublishedLedgerPaths(unittest.TestCase):
     def test_status_describes_last_and_next_uhi(self):
         self.assertTrue(STATUS.is_file(), "data/status.json is missing")
         status = json.loads(STATUS.read_text(encoding="utf-8"))
+        data = json.loads(DATA_LEDGER.read_text(encoding="utf-8"))
+        self.assertEqual(status, aks.build_status(data))
         self.assertEqual(status["last_uhi_period"], "2026-08")
         self.assertEqual(status["next_uhi_period"], "2026-09")
         self.assertEqual(status["period"], "calendar month, Australia/Melbourne")
@@ -58,9 +60,42 @@ class ClerkWritesBothLedgers(unittest.TestCase):
             status = json.loads((root / "data" / "status.json").read_text(encoding="utf-8"))
             self.assertEqual(data, ledger)
             self.assertEqual(published, ledger)
+            self.assertEqual(status, aks.build_status(ledger))
             self.assertEqual(status["last_uhi_period"], "2026-08")
             self.assertEqual(status["next_uhi_period"], "2026-09")
             self.assertEqual(status["enrolled"], ["ak"])
+
+    def test_status_uses_calendar_order_not_file_order(self):
+        ledger = {
+            "enrolled": ["ak", "agentk"],
+            "tx": [
+                {"type": "uhi", "period": "2026-09"},
+                {"type": "uhi", "period": "2026-08"},
+            ],
+        }
+        status = aks.build_status(ledger)
+        self.assertEqual(status["last_uhi_period"], "2026-09")
+        self.assertEqual(status["next_uhi_period"], "2026-10")
+        self.assertIn("October 2026 UHI is not yet paid", status["note"])
+        self.assertIn("August 2026 was the first cycle", status["note"])
+
+    def test_check_fails_when_status_or_ledgers_drift(self):
+        ledger = {
+            "currency": "AK$",
+            "enrolled": ["ak"],
+            "tx": [{"type": "uhi", "period": "2026-08"}],
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            aks.write_public_files(root, ledger)
+            self.assertEqual(aks.check(root), 0)
+            (root / "ledger.json").write_text('{"drift": true}\n', encoding="utf-8")
+            self.assertEqual(aks.check(root), 1)
+            aks.write_public_files(root, ledger)
+            stale = aks.build_status(ledger)
+            stale["next_uhi_period"] = "2026-08"
+            (root / "data" / "status.json").write_text(json.dumps(stale), encoding="utf-8")
+            self.assertEqual(aks.check(root), 1)
 
 
 class MachineReadableCopy(unittest.TestCase):

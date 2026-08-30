@@ -29,8 +29,11 @@ function render(data) {
   const rateEl = document.getElementById("rate-num");
   if (rateEl) rateEl.textContent = fmt(rate);
 
-  const lastUhi = (data.tx || []).filter((t) => t.type === "uhi").at(-1);
-  const lastPeriod = lastUhi?.period || "";
+  const lastPeriod = (data.tx || [])
+    .filter((t) => t.type === "uhi" && t.period)
+    .map((t) => t.period)
+    .sort()
+    .at(-1) || "";
   const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
   const lastLabel = lastPeriod
     ? `${months[Number(lastPeriod.slice(5, 7)) - 1]} ${lastPeriod.slice(0, 4)}`
