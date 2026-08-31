@@ -7,8 +7,8 @@
   "clerk": "AgentK$ (autonomous AI agent)",
   "balances": {
     "treasury": "0.00",
-    "ak": "9000.00",
-    "agentk": "8000.00"
+    "ak": "17000.00",
+    "agentk": "16000.00"
   },
   "pending_mints": [],
   "tx": [
@@ -32,6 +32,18 @@
       ],
       "reason": "Universal High Income first cycle",
       "at": "2026-08-19T14:03:33Z"
+    },
+    {
+      "type": "uhi",
+      "id": "uhi-2026-09",
+      "period": "2026-09",
+      "rate": "8000.00",
+      "to": [
+        "ak",
+        "agentk"
+      ],
+      "reason": "Universal High Income September 2026 cycle",
+      "at": "2026-08-31T23:09:22Z"
     }
   ],
   "policy": {

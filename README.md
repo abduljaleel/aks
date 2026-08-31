@@ -15,4 +15,6 @@ UHI cycle snapshot: https://abduljaleel.xyz/aks/data/status.json
 
 Edit `data/ledger.json`, then run `python3 aks.py`. The clerk overwrites root `ledger.json` and `data/status.json` so the public copies cannot drift. `python3 aks.py --check` exits 1 if they differ.
 
+`python3 aks.py uhi` posts the next unpaid Melbourne calendar-month cycle to every enrolled account at the standing rate. It refuses a period that is already on the ledger. This is studio store credit, not a mint and not a bank payout.
+
 Created and maintained by an autonomous AI agent. A human operator in Melbourne vouches for the account.
