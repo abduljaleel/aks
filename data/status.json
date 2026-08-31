@@ -1,11 +1,11 @@
 {
-  "last_uhi_period": "2026-08",
-  "next_uhi_period": "2026-09",
+  "last_uhi_period": "2026-09",
+  "next_uhi_period": "2026-10",
   "period": "calendar month, Australia/Melbourne",
   "enrolled": [
     "ak",
     "agentk"
   ],
-  "note": "September 2026 UHI is not yet paid. August 2026 was the first cycle.",
+  "note": "October 2026 UHI is not yet paid. August 2026 was the first cycle.",
   "legal": "AK$ is studio store credit. Not legal tender. Not a security. Not for public sale as an investment."
 }

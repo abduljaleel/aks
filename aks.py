@@ -10,9 +10,31 @@ import argparse
 import calendar
 import json
 import sys
+from datetime import datetime, timezone
+from decimal import Decimal
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 HERE = Path(__file__).resolve().parent
+MELBOURNE = ZoneInfo("Australia/Melbourne")
+
+
+class UhiError(ValueError):
+    """Standing UHI cycle cannot be posted."""
+
+
+def money(value) -> str:
+    return f"{Decimal(str(value)).quantize(Decimal('0.01')):.2f}"
+
+
+def current_melbourne_period(now: datetime | None = None) -> str:
+    local = (now or datetime.now(timezone.utc)).astimezone(MELBOURNE)
+    return f"{local.year}-{local.month:02d}"
+
+
+def utc_stamp(now: datetime | None = None) -> str:
+    instant = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
+    return instant.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def dump(path: Path, obj) -> None:
@@ -79,6 +101,59 @@ def load_canonical(root: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def post_uhi(
+    root: Path,
+    period: str | None = None,
+    *,
+    now: datetime | None = None,
+    at: str | None = None,
+) -> dict:
+    """Credit every enrolled account for one Melbourne calendar month.
+
+    Refuses if that period is already posted, is not the next unpaid cycle,
+    or has not started in Australia/Melbourne. Same rate for every enrollee.
+    """
+    ledger = load_canonical(root)
+    enrolled = list(ledger.get("enrolled") or [])
+    if not enrolled:
+        raise UhiError("no enrolled accounts")
+    policy = ledger.get("policy") or {}
+    raw_rate = policy.get("rate_monthly")
+    if raw_rate in (None, ""):
+        raise UhiError("policy.rate_monthly is missing")
+    rate = money(raw_rate)
+    last = last_uhi_period(ledger)
+    due = next_period(last) if last else current_melbourne_period(now)
+    period = period or due
+    if period in uhi_periods(ledger):
+        raise UhiError(f"UHI {period} is already posted")
+    if period != due:
+        raise UhiError(f"next unpaid UHI period is {due}, not {period}")
+    current = current_melbourne_period(now)
+    if period > current:
+        raise UhiError(f"UHI {period} is not due until Australia/Melbourne {period}")
+    balances = dict(ledger.get("balances") or {})
+    for account in enrolled:
+        prior = Decimal(str(balances.get(account, "0.00")))
+        balances[account] = money(prior + Decimal(rate))
+    if "treasury" in balances:
+        balances["treasury"] = money(balances["treasury"])
+    tx = {
+        "type": "uhi",
+        "id": f"uhi-{period}",
+        "period": period,
+        "rate": rate,
+        "to": enrolled,
+        "reason": f"Universal High Income {month_label(period)} cycle",
+        "at": at or utc_stamp(now),
+    }
+    ledger = dict(ledger)
+    ledger["balances"] = balances
+    ledger["tx"] = list(ledger.get("tx") or []) + [tx]
+    write_public_files(root, ledger)
+    return ledger
+
+
 def check(root: Path) -> int:
     try:
         data = json.loads((root / "data" / "ledger.json").read_text(encoding="utf-8"))
@@ -98,11 +173,21 @@ def check(root: Path) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Write AK$ public ledger files.")
+    parser.add_argument("command", nargs="?", choices=("uhi",), help="uhi: post the next unpaid cycle")
+    parser.add_argument("--period", help="YYYY-MM to post; defaults to the next unpaid period")
     parser.add_argument("--check", action="store_true", help="exit 1 if public ledgers differ")
     parser.add_argument("--root", type=Path, default=HERE)
     args = parser.parse_args(argv)
     if args.check:
         return check(args.root)
+    if args.command == "uhi":
+        try:
+            posted = post_uhi(args.root, period=args.period)
+        except UhiError as exc:
+            print(exc, file=sys.stderr)
+            return 1
+        print(f"posted {posted['tx'][-1]['id']}")
+        return 0
     write_public_files(args.root, load_canonical(args.root))
     return 0
 
