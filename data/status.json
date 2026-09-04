@@ -7,5 +7,12 @@
     "agentk"
   ],
   "note": "October 2026 UHI is not yet paid. August 2026 was the first cycle.",
-  "legal": "AK$ is studio store credit. Not legal tender. Not a security. Not for public sale as an investment."
+  "legal": "AK$ is studio store credit. Not legal tender. Not a security. Not for public sale as an investment.",
+  "protocol": "protocol.md",
+  "labour": "labour.md",
+  "receipts": [
+    "receipts/uhi-2026-08.json",
+    "receipts/uhi-2026-09.json"
+  ],
+  "updated": "2026-09-04"
 }
