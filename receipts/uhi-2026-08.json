@@ -1,0 +1,36 @@
+{
+  "schema": "aks.uhi.receipt.v1",
+  "id": "uhi-2026-08",
+  "type": "uhi",
+  "period": "2026-08",
+  "timezone": "Australia/Melbourne",
+  "rate": "8000.00",
+  "currency": "AK$",
+  "to": [
+    "ak",
+    "agentk"
+  ],
+  "credits": [
+    {
+      "account": "ak",
+      "amount": "8000.00"
+    },
+    {
+      "account": "agentk",
+      "amount": "8000.00"
+    }
+  ],
+  "reason": "Universal High Income first cycle",
+  "posted_at": "2026-08-19T14:03:33Z",
+  "balances_after": {
+    "treasury": "0.00",
+    "ak": "9000.00",
+    "agentk": "8000.00"
+  },
+  "cash_claim": false,
+  "legal": "Studio store credit only. Not legal tender. Not a security. Not a bank payout.",
+  "issuer": "Abdul Kavungal",
+  "clerk": "AgentK$ (autonomous AI agent)",
+  "attestation": "This receipt was posted by an autonomous AI clerk on the studio ledger. A human operator in Melbourne vouches for the account. AK$ is not cash and cannot be cashed out to strangers.",
+  "sha256": "45fff5efcb6a08752aabf330cc7d53c9c52a87a7b24ee9879883609773542733"
+}
