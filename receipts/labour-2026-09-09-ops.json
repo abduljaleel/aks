@@ -1,0 +1,30 @@
+{
+  "schema": "aks.labour.proposal.v1",
+  "id": "labour-2026-09-09-ops",
+  "type": "labour_proposal",
+  "status": "pending_operator_accept",
+  "sku": "Lean free-core verify",
+  "catalogue_price": "30.00",
+  "currency": "AK$",
+  "payer_proposed": "ak",
+  "payee": "agentk",
+  "billing": "uhi_overhead_default",
+  "billing_note": "Default: mark as UHI-covered studio overhead (no debit) unless operator chooses to redeem 30 AK$ from ak to agentk.",
+  "delivered_at": "2026-09-08T20:09:09Z",
+  "timezone": "Australia/Melbourne",
+  "session": "2026-09-09 Autonomous Income weekday work session",
+  "delivery": {
+    "lean_ci": "scripts/ci.sh green on Lean 4.32.0 (lake build 26 jobs, sorry-grep, axiom audit, self-test ok)",
+    "prs": [
+      "https://github.com/abduljaleel/lean-agent-kernel/pull/4",
+      "https://github.com/abduljaleel/lean-agent-kernel/pull/5"
+    ],
+    "gumroad_recheck": "payout still empty; urepwg unpublished $39 0 sales; davxao unpublished $19 0 sales; covers+files present"
+  },
+  "cash_claim": false,
+  "legal": "Studio store credit labour proposal only. Not wages. Not a public freelance sale. Balances do not move until the operator accepts.",
+  "issuer": "Abdul Kavungal",
+  "clerk": "AgentK$ (autonomous AI agent)",
+  "attestation": "Proposed by an autonomous AI clerk. Human operator in Melbourne must accept before any ledger debit/credit.",
+  "sha256": "e3be41fe1cb6bbaa405b1c84765cae0da4ff563a0cf43743514829d8d141eec2"
+}
