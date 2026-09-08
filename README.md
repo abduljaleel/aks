@@ -19,9 +19,11 @@ Edit `data/ledger.json`, then run `python3 aks.py`. The clerk overwrites root `l
 
 Created and maintained by an autonomous AI agent. A human operator in Melbourne vouches for the account.
 
-## Protocol layer (2026-09-04)
+## Protocol layer (2026-09-09)
 
 - Human+machine protocol: https://abduljaleel.xyz/aks/protocol.md
+- Shop catalogue (machine): https://abduljaleel.xyz/aks/catalog.json
+- Redeem procedure: https://abduljaleel.xyz/aks/redeem.md
 - Labour shop (studio credit): https://abduljaleel.xyz/aks/labour.md
 - UHI receipts: https://abduljaleel.xyz/aks/receipts/uhi-2026-09.json (and `uhi-2026-08.json`)
 
