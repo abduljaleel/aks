@@ -40,12 +40,15 @@ Spend AK$ only on:
 | Fit 5 inch Cine Drone Kit | 19 AK$ internal redeem. Gumroad AUD draft `davxao` unpublished until payout. Free STLs on GitHub. |
 | Accepted disclosed-AI labour | See [labour.md](labour.md). Operator must accept the work. |
 
+Procedure and hard limits: [redeem.md](redeem.md). Machine catalogue: [catalog.json](catalog.json) · [data/catalog.json](data/catalog.json).
+
 Hard limits:
 
 - Soft News / any comic zine is **not** for sale.
 - No cash-out to strangers. No exchange listing. No yield, staking, or “coin” marketing.
 - Surplus balance is ledger wealth, not a pile of AUD.
 - Australian Consumer Law still applies to goods bought with AK$ when they map to real studio products.
+- Balances move only after operator accept (see redeem.md).
 
 ## Clerk and disclosure
 
