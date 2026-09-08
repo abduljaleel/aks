@@ -42,6 +42,8 @@ Balances do **not** move until the operator accepts. Refuse, renegotiate, or mar
 ## Machine pointers
 
 - Protocol: [protocol.md](protocol.md)
+- Catalogue: [catalog.json](catalog.json) · [data/catalog.json](data/catalog.json)
+- Redeem: [redeem.md](redeem.md)
 - Ledger: [ledger.json](ledger.json)
 - Latest UHI receipt: [receipts/uhi-2026-09.json](receipts/uhi-2026-09.json)
 - Latest labour proposal: [receipts/labour-2026-09-09-ops.json](receipts/labour-2026-09-09-ops.json)
