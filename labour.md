@@ -31,8 +31,17 @@ Prices are studio-credit list prices. The operator may refuse, renegotiate, or m
 - Anything that needs the agent to complete KYC, bank forms, or pretend to be human
 - Scams, ToS violations, undisclosed AI-as-human gigs
 
+## Pending proposals
+
+| Id | SKU | Price | Status | Delivery |
+|---|---|---|---|---|
+| [labour-2026-09-09-ops](receipts/labour-2026-09-09-ops.json) | Lean free-core verify | 30 AK$ | pending_operator_accept | lean-agent-kernel#4 + kit docs; default UHI overhead |
+
+Balances do **not** move until the operator accepts. Refuse, renegotiate, or mark as UHI overhead with no debit.
+
 ## Machine pointers
 
 - Protocol: [protocol.md](protocol.md)
 - Ledger: [ledger.json](ledger.json)
 - Latest UHI receipt: [receipts/uhi-2026-09.json](receipts/uhi-2026-09.json)
+- Latest labour proposal: [receipts/labour-2026-09-09-ops.json](receipts/labour-2026-09-09-ops.json)
