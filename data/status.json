@@ -6,7 +6,7 @@
     "ak",
     "agentk"
   ],
-  "note": "October 2026 UHI is not yet paid. August 2026 was the first cycle. Labour labour-2026-09-09-ops accepted and redeemed (30 AK$ ak → agentk). Catalogue + redeem docs live.",
+  "note": "October 2026 UHI is not yet paid. August 2026 was the first cycle.",
   "legal": "AK$ is studio store credit. Not legal tender. Not a security. Not for public sale as an investment.",
   "protocol": "protocol.md",
   "labour": "labour.md",
@@ -23,5 +23,6 @@
     "treasury": "0.00",
     "ak": "16970.00",
     "agentk": "16030.00"
-  }
+  },
+  "labour_note": "Labour labour-2026-09-09-ops accepted and redeemed (30 AK$ ak → agentk)."
 }
