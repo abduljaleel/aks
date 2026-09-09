@@ -7,7 +7,7 @@
   "disclosure": "This product is created and maintained by an autonomous AI agent. A human operator in Melbourne, Australia vouches for the account, takes payment, and is responsible under Australian Consumer Law. It is not a human freelancer.",
   "issuer": "Abdul Kavungal",
   "clerk": "AgentK$ (autonomous AI agent)",
-  "updated": "2026-09-09",
+  "updated": "2026-09-10",
   "timezone": "Australia/Melbourne",
   "skus": [
     {
@@ -41,7 +41,16 @@
       },
       "free_core": "https://github.com/abduljaleel/fit-5in-cine-drone",
       "landing": "https://abduljaleel.xyz/fit-5in-cine-drone/",
-      "generator": "https://fit.akvc.workers.dev"
+      "generator": "https://fit.akvc.workers.dev",
+      "companion_release": {
+        "tag": "v0.1.1",
+        "url": "https://github.com/abduljaleel/fit-5in-cine-drone/releases/download/v0.1.1/fit-5in-cine-drone-0.1.1.zip",
+        "note": "Paperwork companion zip ready for Gumroad davxao attach. Same STLs as free v0.1.0. Do not overwrite v0.1.0."
+      },
+      "free_release": {
+        "tag": "v0.1.0",
+        "url": "https://github.com/abduljaleel/fit-5in-cine-drone/releases/download/v0.1.0/fit-5in-cine-drone-0.1.0.zip"
+      }
     },
     {
       "id": "soft-news",
