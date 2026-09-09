@@ -6,18 +6,22 @@
     "ak",
     "agentk"
   ],
-  "note": "October 2026 UHI is not yet paid. August 2026 was the first cycle. One labour proposal pending operator accept (default UHI overhead). Catalogue + redeem docs live.",
+  "note": "October 2026 UHI is not yet paid. August 2026 was the first cycle. Labour labour-2026-09-09-ops accepted and redeemed (30 AK$ ak → agentk). Catalogue + redeem docs live.",
   "legal": "AK$ is studio store credit. Not legal tender. Not a security. Not for public sale as an investment.",
   "protocol": "protocol.md",
   "labour": "labour.md",
   "receipts": [
     "receipts/uhi-2026-08.json",
-    "receipts/uhi-2026-09.json"
-  ],
-  "updated": "2026-09-09",
-  "pending_labour": [
+    "receipts/uhi-2026-09.json",
     "receipts/labour-2026-09-09-ops.json"
   ],
+  "updated": "2026-09-09",
+  "pending_labour": [],
   "catalog": "catalog.json",
-  "redeem": "redeem.md"
+  "redeem": "redeem.md",
+  "balances": {
+    "treasury": "0.00",
+    "ak": "16970.00",
+    "agentk": "16030.00"
+  }
 }

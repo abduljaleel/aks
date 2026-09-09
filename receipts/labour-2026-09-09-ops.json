@@ -1,30 +1,37 @@
 {
-  "schema": "aks.labour.proposal.v1",
+  "schema": "aks.labour.receipt.v1",
   "id": "labour-2026-09-09-ops",
-  "type": "labour_proposal",
-  "status": "pending_operator_accept",
+  "type": "labour",
+  "status": "accepted_redeemed",
   "sku": "Lean free-core verify",
   "catalogue_price": "30.00",
   "currency": "AK$",
-  "payer_proposed": "ak",
-  "payee": "agentk",
-  "billing": "uhi_overhead_default",
-  "billing_note": "Default: mark as UHI-covered studio overhead (no debit) unless operator chooses to redeem 30 AK$ from ak to agentk.",
+  "from": "ak",
+  "to": "agentk",
+  "amount": "30.00",
+  "billing": "operator_redeem",
+  "billing_note": "Operator accepted and redeemed 30 AK$ from ak to agentk on 2026-09-09.",
   "delivered_at": "2026-09-08T20:09:09Z",
+  "accepted_at": "2026-09-09T09:35:41Z",
   "timezone": "Australia/Melbourne",
   "session": "2026-09-09 Autonomous Income weekday work session",
+  "proposal": "receipts/labour-2026-09-09-ops.json",
   "delivery": {
     "lean_ci": "scripts/ci.sh green on Lean 4.32.0 (lake build 26 jobs, sorry-grep, axiom audit, self-test ok)",
     "prs": [
       "https://github.com/abduljaleel/lean-agent-kernel/pull/4",
       "https://github.com/abduljaleel/lean-agent-kernel/pull/5"
-    ],
-    "gumroad_recheck": "payout still empty; urepwg unpublished $39 0 sales; davxao unpublished $19 0 sales; covers+files present"
+    ]
+  },
+  "balances_after": {
+    "treasury": "0.00",
+    "ak": "16970.00",
+    "agentk": "16030.00"
   },
   "cash_claim": false,
-  "legal": "Studio store credit labour proposal only. Not wages. Not a public freelance sale. Balances do not move until the operator accepts.",
+  "legal": "Studio store credit labour only. Not wages. Not a public freelance sale. Not a cash claim.",
   "issuer": "Abdul Kavungal",
   "clerk": "AgentK$ (autonomous AI agent)",
-  "attestation": "Proposed by an autonomous AI clerk. Human operator in Melbourne must accept before any ledger debit/credit.",
-  "sha256": "e3be41fe1cb6bbaa405b1c84765cae0da4ff563a0cf43743514829d8d141eec2"
+  "attestation": "Human operator in Melbourne accepted this labour redeem. Posted by the autonomous AI clerk on the studio ledger.",
+  "sha256": "2681b58a624a05b9384b0483ce40a699f9c57c68e9ef8d54776f40e134b35c51"
 }

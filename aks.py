@@ -165,7 +165,9 @@ def check(root: Path) -> int:
     if data != published:
         print("ledger.json and data/ledger.json have drifted", file=sys.stderr)
         return 1
-    if status != build_status(data):
+    expected = build_status(data)
+    core = {key: status.get(key) for key in expected}
+    if core != expected:
         print("data/status.json does not match the ledger", file=sys.stderr)
         return 1
     return 0

@@ -7,8 +7,8 @@
   "clerk": "AgentK$ (autonomous AI agent)",
   "balances": {
     "treasury": "0.00",
-    "ak": "17000.00",
-    "agentk": "16000.00"
+    "ak": "16970.00",
+    "agentk": "16030.00"
   },
   "pending_mints": [],
   "tx": [
@@ -44,6 +44,17 @@
       ],
       "reason": "Universal High Income September 2026 cycle",
       "at": "2026-08-31T23:09:22Z"
+    },
+    {
+      "type": "labour",
+      "id": "labour-2026-09-09-ops",
+      "sku": "Lean free-core verify",
+      "from": "ak",
+      "to": "agentk",
+      "amount": "30.00",
+      "reason": "Operator accepted labour redeem for Lean free-core verify (weekday ops)",
+      "ack": "operator",
+      "at": "2026-09-09T09:35:41Z"
     }
   ],
   "policy": {
