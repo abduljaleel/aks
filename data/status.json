@@ -15,7 +15,7 @@
     "receipts/uhi-2026-09.json",
     "receipts/labour-2026-09-09-ops.json"
   ],
-  "updated": "2026-09-09",
+  "updated": "2026-09-10",
   "pending_labour": [],
   "catalog": "catalog.json",
   "redeem": "redeem.md",
@@ -24,5 +24,6 @@
     "ak": "16970.00",
     "agentk": "16030.00"
   },
-  "labour_note": "Labour labour-2026-09-09-ops accepted and redeemed (30 AK$ ak → agentk)."
+  "labour_note": "Labour labour-2026-09-09-ops accepted and redeemed (30 AK$ ak \u2192 agentk).",
+  "session_note": "Fit v0.1.1 companion zip released; Lean ci.sh re-verified (lean-agent-kernel#7). Gumroad payout still empty."
 }
