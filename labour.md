@@ -37,6 +37,8 @@ Prices are studio-credit list prices. The operator may refuse, renegotiate, or m
 |---|---|---|---|---|
 | [labour-2026-09-09-ops](receipts/labour-2026-09-09-ops.json) | Lean free-core verify | 30 AK$ | accepted_redeemed | operator redeemed 30 AK$ ak → agentk |
 
+No open proposals. 2026-09-10 weekday ops (Lean re-verify #7 + Fit v0.1.1 release) recorded as UHI-covered studio overhead — no new debit unless the operator opens a redeem.
+
 Balances do **not** move until the operator accepts. Refuse, renegotiate, or mark as UHI overhead with no debit.
 
 ## Machine pointers
