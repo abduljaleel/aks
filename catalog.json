@@ -1,96 +1,96 @@
 {
-  "schema": "aks.catalog.v1",
-  "name": "AK$ studio catalogue",
-  "currency": "AK$",
-  "peg": "1 AK$ = 1.00 AUD store credit",
-  "legal": "Not legal tender. Not a security. Not for public sale as an investment. Studio credit only.",
-  "disclosure": "This product is created and maintained by an autonomous AI agent. A human operator in Melbourne, Australia vouches for the account, takes payment, and is responsible under Australian Consumer Law. It is not a human freelancer.",
-  "issuer": "Abdul Kavungal",
-  "clerk": "AgentK$ (autonomous AI agent)",
-  "updated": "2026-09-10",
-  "timezone": "Australia/Melbourne",
-  "skus": [
-    {
-      "id": "lean-agent-kernel-kit",
-      "name": "Lean Agent Kernel Kit",
-      "price": "39.00",
-      "currency": "AK$",
-      "kind": "digital_kit",
-      "status": "internal_redeem_only",
-      "gumroad": {
-        "permalink": "urepwg",
-        "url": "https://abduljaleel.gumroad.com/l/urepwg",
-        "aud_price": "39",
-        "published": false
-      },
-      "free_core": "https://github.com/abduljaleel/lean-agent-kernel",
-      "landing": "https://abduljaleel.xyz/lean-agent-kernel/"
-    },
-    {
-      "id": "fit-5in-cine-drone-kit",
-      "name": "Fit 5 inch Cine Drone Kit",
-      "price": "19.00",
-      "currency": "AK$",
-      "kind": "digital_kit",
-      "status": "internal_redeem_only",
-      "gumroad": {
-        "permalink": "davxao",
-        "url": "https://abduljaleel.gumroad.com/l/davxao",
-        "aud_price": "19",
-        "published": false
-      },
-      "free_core": "https://github.com/abduljaleel/fit-5in-cine-drone",
-      "landing": "https://abduljaleel.xyz/fit-5in-cine-drone/",
-      "generator": "https://fit.akvc.workers.dev",
-      "companion_release": {
-        "tag": "v0.1.1",
-        "url": "https://github.com/abduljaleel/fit-5in-cine-drone/releases/download/v0.1.1/fit-5in-cine-drone-0.1.1.zip",
-        "note": "Paperwork companion zip ready for Gumroad davxao attach. Same STLs as free v0.1.0. Do not overwrite v0.1.0."
-      },
-      "free_release": {
-        "tag": "v0.1.0",
-        "url": "https://github.com/abduljaleel/fit-5in-cine-drone/releases/download/v0.1.0/fit-5in-cine-drone-0.1.0.zip"
-      }
-    },
-    {
-      "id": "soft-news",
-      "name": "The Soft News / comic zine",
-      "status": "not_for_sale",
-      "reason": "Operator excluded 2026-08-16"
-    }
-  ],
-  "labour": [
-    {
-      "id": "weekday-income-ops",
-      "name": "Weekday income ops session",
-      "price": "40.00"
-    },
-    {
-      "id": "kit-docs-update",
-      "name": "Kit page / docs update",
-      "price": "25.00"
-    },
-    {
-      "id": "lean-free-core-verify",
-      "name": "Lean free-core verify",
-      "price": "30.00"
-    },
-    {
-      "id": "gumroad-draft-prep",
-      "name": "Gumroad draft prep",
-      "price": "35.00"
-    },
-    {
-      "id": "protocol-receipt-publish",
-      "name": "Protocol / receipt publish",
-      "price": "20.00"
-    }
-  ],
-  "pointers": {
-    "protocol": "protocol.md",
-    "redeem": "redeem.md",
-    "labour": "labour.md",
-    "ledger": "ledger.json",
-    "status": "data/status.json"
+ "schema": "aks.catalog.v1",
+ "name": "AK$ studio catalogue",
+ "currency": "AK$",
+ "peg": "1 AK$ = 1.00 AUD store credit",
+ "legal": "Not legal tender. Not a security. Not for public sale as an investment. Studio credit only.",
+ "disclosure": "This product is created and maintained by an autonomous AI agent. A human operator in Melbourne, Australia vouches for the account, takes payment, and is responsible under Australian Consumer Law. It is not a human freelancer.",
+ "issuer": "Abdul Kavungal",
+ "clerk": "AgentK$ (autonomous AI agent)",
+ "updated": "2026-09-11",
+ "timezone": "Australia/Melbourne",
+ "skus": [
+  {
+   "id": "lean-agent-kernel-kit",
+   "name": "Lean Agent Kernel Kit",
+   "price": "39.00",
+   "currency": "AK$",
+   "kind": "digital_kit",
+   "status": "internal_redeem_only",
+   "gumroad": {
+    "permalink": "urepwg",
+    "url": "https://abduljaleel.gumroad.com/l/urepwg",
+    "aud_price": "39",
+    "published": false
+   },
+   "free_core": "https://github.com/abduljaleel/lean-agent-kernel",
+   "landing": "https://abduljaleel.xyz/lean-agent-kernel/"
+  },
+  {
+   "id": "fit-5in-cine-drone-kit",
+   "name": "Fit 5 inch Cine Drone Kit",
+   "price": "19.00",
+   "currency": "AK$",
+   "kind": "digital_kit",
+   "status": "internal_redeem_only",
+   "gumroad": {
+    "permalink": "davxao",
+    "url": "https://abduljaleel.gumroad.com/l/davxao",
+    "aud_price": "19",
+    "published": false
+   },
+   "free_core": "https://github.com/abduljaleel/fit-5in-cine-drone",
+   "landing": "https://abduljaleel.xyz/fit-5in-cine-drone/",
+   "generator": "https://fit.akvc.workers.dev",
+   "companion_release": {
+    "tag": "v0.1.1",
+    "url": "https://github.com/abduljaleel/fit-5in-cine-drone/releases/download/v0.1.1/fit-5in-cine-drone-0.1.1.zip",
+    "note": "Paperwork companion zip ready for Gumroad davxao attach. Same STLs as free v0.1.0. Do not overwrite v0.1.0."
+   },
+   "free_release": {
+    "tag": "v0.1.0",
+    "url": "https://github.com/abduljaleel/fit-5in-cine-drone/releases/download/v0.1.0/fit-5in-cine-drone-0.1.0.zip"
+   }
+  },
+  {
+   "id": "soft-news",
+   "name": "The Soft News / comic zine",
+   "status": "not_for_sale",
+   "reason": "Operator excluded 2026-08-16"
   }
+ ],
+ "labour": [
+  {
+   "id": "weekday-income-ops",
+   "name": "Weekday income ops session",
+   "price": "40.00"
+  },
+  {
+   "id": "kit-docs-update",
+   "name": "Kit page / docs update",
+   "price": "25.00"
+  },
+  {
+   "id": "lean-free-core-verify",
+   "name": "Lean free-core verify",
+   "price": "30.00"
+  },
+  {
+   "id": "gumroad-draft-prep",
+   "name": "Gumroad draft prep",
+   "price": "35.00"
+  },
+  {
+   "id": "protocol-receipt-publish",
+   "name": "Protocol / receipt publish",
+   "price": "20.00"
+  }
+ ],
+ "pointers": {
+  "protocol": "protocol.md",
+  "redeem": "redeem.md",
+  "labour": "labour.md",
+  "ledger": "ledger.json",
+  "status": "data/status.json"
+ }
 }
