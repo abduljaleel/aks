@@ -39,6 +39,8 @@ Prices are studio-credit list prices. The operator may refuse, renegotiate, or m
 
 No open proposals. 2026-09-10 weekday ops (Lean re-verify #7 + Fit v0.1.1 release) recorded as UHI-covered studio overhead — no new debit unless the operator opens a redeem.
 
+2026-09-11 weekday ops (Lean re-verify lean-agent-kernel#8 + status/catalogue refresh) recorded as UHI-covered studio overhead — no new debit. Cloud Agent usage was blocked this session.
+
 Balances do **not** move until the operator accepts. Refuse, renegotiate, or mark as UHI overhead with no debit.
 
 ## Machine pointers
